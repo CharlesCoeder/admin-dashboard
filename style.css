@@ -32,6 +32,13 @@ body {
     font-weight: bold;
     padding-left: 1vw;
     padding-top: 1.5vh;
+    grid-template-rows: auto auto 1fr;
+    gap: 30px;
+    padding-left: 20px;
+}
+
+.sidebar-core, .sidebar-extra {
+    padding-left: 15px;
 }
 
 .sidebar .dashboard-logo {
@@ -58,6 +65,10 @@ body {
 .content {
     background-color: #e6e6e6;
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px;
 }
 
 a {
@@ -158,4 +169,95 @@ img {
 
 .profile > *, .search img{
     cursor: pointer;
+}
+
+.projects {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+
+}
+
+.announcements, .trending, .project-card {
+    background-color: white;
+}
+
+.announcements {
+    grid-row: 1 / 2;
+}
+
+.trending {
+    grid-row: 2 / 3;
+}
+
+.announcements, .trending {
+    margin: 20px 0px 20px 20px;
+    border-radius: 20px;
+}
+
+.project-card {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    padding: 20px 20px 0px;
+    border-radius: 20px;
+}
+
+.card-buttons {
+    justify-self: end;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 60px 30px;
+}
+
+.announcement-header{
+    font-size: 1.25rem;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color:rgb(126, 126, 126);
+    margin: 10px;
+}
+
+.project-card, .announcements, .trending {
+    box-shadow: 5px 5px 5px darkgray;
+}
+
+.trend > img {
+    border-radius: 50%;
+}
+
+.trend {
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.trending {
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.trending-text > div:first-child {
+    font-weight: bold;
+}
+
+.trending-text > div:not(:first-child){
+    font-size: 1.25rem;
+    color: rgb(126, 126, 126)
 }
